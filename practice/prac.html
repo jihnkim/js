@@ -5,10 +5,41 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="css/style.css">
-    <script src="js/test.js"></script>
+    <!-- <script src="js/test.js"></script> -->
 </head>
 <body>
     <!-- 외부 스타일 시트 / js 사용 권장 -->
-    <h1>hello</h1>
+
+    <!-- 표만들어보깅 -->
+
+    <table border="1" width="250" height="200">
+        <thead>
+            <tr>
+                <th>m</th>
+                <th colspan="2">A</th>
+                <th colspan="2">B</th>
+            </tr>
+        </thead>
+
+        <tbody>
+                
+            <tr>
+                <td rowspan="2">1</td>
+                <td colspan="2">a</td>
+                <td>b</td>
+                <td>b</td>
+            </tr>
+
+            <tr>
+                <td colspan="3" rowspan="2">ab</td>
+                <td>b</td>
+            </tr>
+
+            <tr>
+                <td>2</td>
+            </tr>
+
+        </tbody>
+    </table>
 </body>
 </html>
