@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+        <input type="text" name="inputname" value="기본값">
+        <input type="password" name="password">
+        <input type="submit" value="확인">
+    </form>
+
+    <form action="#" method="get">
+        <fieldset>
+            <legend id="join">회원가입</legend>
+            <table border="1" width="400" height="200">
+                <tr>
+                    <td><label for="name">이름</label></td>
+                    <td><input type="text" id="name"></td>
+                </tr>
+
+                <tr>
+                    <td><label for="password">비밀번호</label></td>
+                    <td><input type="password" id="password"></td>
+                </tr>
+
+                <tr>
+                    <td><label for="tel">전화번호</label></td>
+                    <td><input type="tel" id="tel"></td>
+                </tr>
+
+                <tr>
+                    <td><label for="mail">이메일</label></td>
+                    <td><input type="email" id="mail"></td>
+                </tr>
+
+                <tr>
+                    <td>성별</td>
+                    <td>
+                        <input id="man" type="radio" name="gender" value="m">
+                        <label for="man">남자</label>
+                        <input id="woman" type="radio" name="gender" value="w">
+                        <label for="woman">여자</label>
+                    </td>
+                </tr>
+            </table>
+            <br>
+            <input type="submit" value="제출-★">
+            <input type="reset" value="리셋-★">
+        </fieldset>
+    </form>
+    
+</body>
+</html>

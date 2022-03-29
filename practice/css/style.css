@@ -4,3 +4,8 @@ h1 {
     background: black;
 
 }
+
+legend {
+    color: blue;
+    text-align: center;
+}
