@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CSS3 Property Basic</title>
+    <style>
+        .box { 
+            width: 100px; height: 100px;
+            /* absolute, fixed 차이 -- fixed 는 스크롤해도 그대로 있음 */
+            position: fixed;
+        }
+
+        /* z index는 숫자가 클수록 앞에있음 */
+        .box:nth-child(1) { background-color: red; top: 30px;}
+        .box:nth-child(2) { background-color: green; z-index: 100;}
+        .box:nth-child(3) { background-color: blue; }
+    </style>
+</head>
+
+<body>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Float Style Property</title>
+    <style>
+        .box {
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            margin: 10px;
+            padding: 10px;
+            /* 태그를 왼쪽으로 붙입니다. */
+            float: left;
+        }
+        .box:nth-child(3) {
+            /* clear는 해당 위치(left / right / both)에 뭔가가 있으면 밑으로 내려버림 */
+            clear: left;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">1</div>
+    <div class="box">2</div>
+    <div class="box">3</div>
+    <div class="box">4</div>
+</body>
+</html>

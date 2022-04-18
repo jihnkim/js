@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>style practice</title>
+    <style>
+        .top {
+            width: 300px;
+            height: 50px;
+            border: 1px solid black;
+            float: left;
+        }
+
+        .left {
+            width: 200px;
+            height: 300px;
+            border: 1px solid black;
+            float: left;
+            /* top 박스의 영향 안받기위해 clear left 적용 */
+            clear: left;
+        }
+
+        .right {
+            width: 100px;
+            height: 300px;
+            border: 1px solid black;
+            float: right;
+            clear: right;
+        }
+    </style>
+</head>
+<body>
+    <div class="top">top</div>
+    <div class="left">left</div>
+    <div class="right">right</div>
+</body>
+</html>
