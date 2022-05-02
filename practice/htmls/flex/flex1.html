@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flex</title>
+    <style>
+        .container {
+            display: flex;
+            border: 2px solid red;
+            margin: 10px;
+            /* 주 축 설정 */
+            flex-direction: row;
+            /* 줄바꿈 로우 컬럼 마찬가지. 만약 no wrap이라면 루트 컨테이너 크기만큼 우겨넣음*/
+            flex-wrap: wrap;
+            height: 300px;
+            /* align content는 아이템 전체가 이동, items는 개별아이템이 축방향으로 각자 전부 이동 */
+            align-items: flex-end;
+        }
+
+        .box {
+            border: 2px solid black;
+            width: 100px;
+            height: 100px;
+            margin: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box">A</div>
+        <div class="box">B</div>
+        <div class="box">C</div>
+        <div class="box">D</div>
+        <div class="box">E</div>
+        <div class="box">F</div>
+        <div class="box">G</div>
+        <div class="box">H</div>
+    </div>
+
+    <div class="container">
+        <div class="box" style="height: 30px; width: 100px;">A</div>
+        <div class="box">B</div>
+        <div class="box">C</div>
+    </div>
+
+    <div class="container">
+        <div class="box">A</div>
+        <div class="box">B</div>
+        <div class="box">C</div>
+    </div>
+</body>
+</html>
