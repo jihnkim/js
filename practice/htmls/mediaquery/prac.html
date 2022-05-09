@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>미디어 쿼리</title>
+
+    <style>
+        @media screen and (orientation: portrait) {
+            .container {
+                background-color: blue;
+                display: flex;
+                flex-direction: column;
+
+            }
+
+            .search {
+                order: -1;
+                background-color: violet;
+            }
+
+            .menu {
+                background-color: red;
+            }
+
+            .article {
+                background-color: blue;
+            }
+
+            .foot {
+                background-color: aqua;
+            }
+
+            ul {
+                display: flex;
+                flex-direction: row;
+                background-color: aquamarine;
+                padding: 0;
+                justify-content: space-around;
+            }
+
+            li {
+                list-style: none;
+                background-color: antiquewhite;
+            }
+        }
+
+        @media screen and (orientation: landscape) {
+            body {
+                background-color: blue;
+            }
+
+            .menu {
+                float: left;
+            }
+            ul {
+                display: flex;
+                flex-direction: column;
+                background-color: aquamarine;
+                padding: 0;
+                justify-content: space-around;
+            }
+
+            li {
+                list-style: none;
+                background-color: antiquewhite;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="menu">
+            <ul>
+                <li>nav1</li>
+                <li>nav1</li>
+                <li>nav1</li>
+                <li>nav1</li>
+            </ul>
+        </div>
+        <div class="search">
+            <input type="text">
+        </div>
+        <div class="article">
+            본문
+        </div>
+        <div class="foot">
+            웅양옹
+        </div>
+    </div>
+</body>
+</html>
