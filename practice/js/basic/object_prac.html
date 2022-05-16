@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DOM 연습해보기</title>
+    <script>
+        window.onload = function () {
+            let output = ''
+            let lst = ['<h1>제목</h1>', '<p>문단</p>']
+
+            output += '<h1>제목</h1>';
+            output += '<p>문단</p>'
+            // output += '<>'
+            document.body.innerHTML = output;
+
+            let h1 = document.querySelector('h1')
+            h1.style.background = 'red'
+            h1.style.fontSize = '30px'
+            h1.style.fontWeight = 'bold'
+
+            let p = document.querySelector('p')
+            p.style.fontSize = '13pt'
+            p.style.background = 'blue'
+
+        }
+    </script>
+
+
+</head>
+<body>
+</body>
+</html>

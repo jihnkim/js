@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>DOM Basic</title>
+    <script>
+        // 이벤트를 연결합니다.
+        window.onload = function () {
+            let a = document.querySelectorAll('body > h1');
+            console.log(a.innerHTML)
+            
+            a[0].textContent = '<span>호호</span>'
+            a[1].innerHTML = '<span>호호</span>'
+            a[2].style.color = 'red'
+        };
+        
+    </script>
+</head>
+<body>
+    <h1 id="header1">Header</h1>
+    <h1 id="header2">Header</h1>
+    <h1 id="header3">Header</h1>
+    <h1 id="header4">Header</h1>
+</body>
+</html>
