@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>이벤트 제거</title>
+
+    <script>
+        window.onload = function() {
+            let a = document.getElementById('link')
+            a.onclick = function() {
+                alert('경고')
+                // false 리턴 함으로써 경고메시지만 띄우고 네이버로 이동 x
+                return false
+            }
+        }
+    </script>
+</head>
+<body>
+    <a id="link" href="https://www.naver.com">naver</a>
+</body>
+</html>

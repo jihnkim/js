@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>이벤트 리스너2</title>
+    <script>
+        // 이벤트 처리 순 내려갈 때  -> capture (html > body > div > div)
+        // 올라갈 때 -> bubbling (div > div > body > html)
+        window.onload = function() {
+            let d1 = document.getElementById('d1')
+            
+            let d2 = document.getElementById('d2')
+            
+            let d3 = document.getElementById('d3')
+
+            function d1h() {
+                console.log('D1')
+            }
+            
+            function d2h() {
+                console.log('D2')
+            }
+
+            
+            function d3h(event) {
+                console.log('D3')
+                // 3번 이벤트 핸들러가 발생했을 때 위의 버블링 막고싶을 때
+                // event.stopPropagation()
+            }
+
+            // capture 옵션을 넣으면 내려가면서 d1부터 잡아줌
+            d1.addEventListener('click', d1h, {capture: true})
+            d2.addEventListener('click', d2h)
+            d3.addEventListener('click', d3h)
+        }
+    </script>
+</head>
+<body>
+    <div id="d1">
+        1
+        <div id="d2">
+            2
+            <div id="d3">
+                3
+            </div>
+        </div>
+    </div>
+</body>
+</html>

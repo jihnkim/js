@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>event</title>
+    <style>
+
+    </style>
+
+    <script>
+
+        // 이벤트 객체를 사용하여 이벤트 관련 정보 파악 가능 
+        window.onload = function() {
+            let b = document.querySelector('button')
+            b.onclick = function(a) {
+                console.log(a)
+            }
+        }
+        
+    </script>
+</head>
+<body>
+    <button>버튼</button>
+</body>
+</html>

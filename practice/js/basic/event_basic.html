@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>이벤트</title>
+    <style>
+        button:hover {
+            font-size: 100px;
+            color: red;
+        }
+    </style>
+
+    <script>
+
+        function a() {
+            alert('hi')
+        }
+        function eventHandler() {
+            alert('Warning')
+        }
+        
+    </script>
+</head>
+<body onload="a()">
+    <button onclick="alert('왜눌렀어')">누르지마쇼</button>
+    <button onclick="eventHandler()">누르지마쇼</button>
+
+
+</body>
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>이벤트 리스너2</title>
+    <script>
+        // 이벤트 처리 순 내려갈 때  -> capture (html > body > div > div)
+        // 올라갈 때 -> bubbling (div > div > body > html)
+        window.onload = function() {
+            let d1 = document.getElementById('d1')
+            
+            let d2 = document.getElementById('d2')
+            
+            let d3 = document.getElementById('d3')
+
+            function d1h() {
+                console.log('D1')
+            }
+            
+            function d2h() {
+                console.log('D2')
+            }
+
+            
+            function d3h(event) {
+                console.log('D3')
+                // 3번 이벤트 핸들러가 발생했을 때 위의 버블링 막고싶을 때
+                // event.stopPropagation()
+            }
+
+            d1.addEventListener('click', d1h)
+            d2.addEventListener('click', d2h)
+            d3.addEventListener('click', d3h)
+
+            // document.getElementById('button').addEventListener('click',() => {
+            //     alert('버튼 눌렀엉')
+            // })
+
+            // 사용자정의이벤트
+            d3.addEventListener('aaa', function() {
+                alert('커스텀 이벤트')
+            })
+
+            document.getElementById('butt').addEventListener('click', function(event) {
+                
+                event.stopPropagation()
+                d3.dispatchEvent(new Event('aaa'))
+
+            })
+
+        }
+    </script>
+</head>
+<body>
+    <div id="d1">
+        1
+        <div id="d2">
+            2
+            <div id="d3">
+                3
+                <button id="butt">
+                    hi
+                </button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

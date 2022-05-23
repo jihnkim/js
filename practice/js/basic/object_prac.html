@@ -6,11 +6,12 @@
     <script>
         window.onload = function () {
             let output = ''
-            let lst = ['<h1>제목</h1>', '<p>문단</p>']
 
             output += '<h1>제목</h1>';
-            output += '<p>문단</p>'
-            // output += '<>'
+            output += '<h2>문단</h2>';
+            output += '<p>본문</p>';
+            output += '<a href="https://naver.com">네이버링크라구</a>';
+
             document.body.innerHTML = output;
 
             let h1 = document.querySelector('h1')
@@ -18,9 +19,15 @@
             h1.style.fontSize = '30px'
             h1.style.fontWeight = 'bold'
 
+            let h2 = document.querySelector('h2')
+            h2.style.fontSize = '13pt'
+            h2.style.background = 'blue'
+            
             let p = document.querySelector('p')
-            p.style.fontSize = '13pt'
-            p.style.background = 'blue'
+            p.style.fontSize = '8pt'
+            
+            let a = document.querySelector('a')
+            a.style.textDecoration = 'None'
 
         }
     </script>

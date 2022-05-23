@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>진정한 문서객체모델을보여주마</title>
+    <script>
+        window.onload = function () {
+
+            
+            let body = document.querySelector('body')
+            // h1 태그 생성
+            let h1 = document.createElement('h1')
+            // body에 h1 추가할거임
+            body.appendChild(h1)
+
+            let h2 = document.createElement('h2')
+            body.appendChild(h2)
+
+            h2.innerHTML = 'h2 객체를 Body 태그 안으로 추가해보았다.'
+
+
+        }
+    </script>
+
+
+</head>
+<body>
+</body>
+</html>
