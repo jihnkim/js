@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Data add</title>
+</head>
+<script>
+    window.onload = function() {
+        let check = document.getElementById('check')
+
+        function add() {
+            // n 이라는 새로운 div 생성
+            let n = document.createElement('div');
+
+            // n의 내부 값은 input의 value 값으로 지정
+            n.innerHTML = document.getElementById('in').value
+
+            // n 의 class 이름 지정
+            n.className = 'item'
+
+            // 기존 root div에 자손 추가
+            let parent = document.getElementById('container')
+            parent.appendChild(n)
+
+            document.getElementById('in').value = 'input'
+        }
+
+        check.addEventListener('click', add)
+    }
+</script>
+<style>
+    .item {
+        border: solid royalblue 0.21rem;
+        border-radius: 1.2rem;
+    }
+</style>
+<body>
+    <input id="in" type="text" value="input">
+    <button id="check">입력</button>
+    <div id="container">
+
+    </div>
+</body>
+</html>

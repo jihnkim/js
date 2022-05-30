@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>N count with click event</title>
+</head>
+<style>
+
+    div{
+        font-weight: bold;
+        font-size: 100px;
+    }
+
+</style>
+<script>
+    window.onload = function() {
+        let b1 = document.getElementById('button_increase')
+        let b2 = document.getElementById('button_decrease')
+        let numbox = document.getElementById('count')
+        let cnt = 0
+
+        function increase() {
+            cnt += 1
+            numbox.innerHTML = cnt
+        }
+
+        function decrease() {
+            cnt -= 1
+            numbox.innerHTML = cnt
+        }
+
+        b1.addEventListener('click', increase)
+        b2.addEventListener('click', decrease)
+
+    }
+</script>
+<body>
+    <button id="button_increase">증가</button>
+    <button id="button_decrease">감소</button>
+    <div id="count">0</div>
+
+</body>
+</html>

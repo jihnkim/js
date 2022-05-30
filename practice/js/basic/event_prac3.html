@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>More & Less</title>
+
+    <script>
+        window.onload = function() {
+            let a = document.getElementById('a')
+            let h2 = document.getElementById('h2')
+
+            function desc() {
+                if (a.innerHTML == 'More') {
+                    a.innerHTML = 'Less'
+                    h2.style.display = 'flex'
+                }
+
+                else if (a.innerHTML == 'Less') {
+                    a.innerHTML = 'More'
+                    h2.style.display = 'none'
+                }
+
+            }
+            
+            a.addEventListener('click', desc)
+
+        }
+    </script>
+    <style>
+        h2 {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <h1 id="h1">아래의 More 버튼을 누르면 내용이 보입니다.</h1>
+    <a href="#" id="a">More</a>
+    <h2 id="h2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero voluptatum maiores blanditiis, cupiditate, corrupti doloremque culpa nam neque veniam sit fuga aut repudiandae suscipit modi eos veritatis nobis amet voluptatem!</h2>
+</body>
+</html>
