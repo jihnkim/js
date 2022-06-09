@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>My Calculator</title>
+    <script>
+        function add(a) {
+            let display = document.getElementById('display')
+            display.value += a
+        }
+
+        function calculate() {
+            let display = document.getElementById('display')
+            let result = eval(display.value)
+            if (result == undefined){
+                return
+            }
+            calLog(result)
+            document.getElementById('display').value = result
+        }
+
+        function reset() {
+            document.getElementById('display').value = ""
+        }
+
+        function calLog(result) {
+            let n = document.createElement('span');
+
+            n.innerHTML = document.getElementById('display').value + '=' + result
+
+            let parent = document.getElementById('container2')
+            parent.appendChild(n)
+        }
+
+    </script>
+    <style>
+        div {
+            float: left;
+            text-align: center;
+            width: 250px;
+            height: 300px;
+            border: solid black 1px;
+            margin: 10px;
+        }
+
+        #container2 {
+            overflow: scroll;
+        }
+
+        table {
+            margin: auto;
+        }
+
+        input, span {
+            margin: auto;
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <div id="container1">
+        <h1>계산기</h1>
+        <table>
+            <tr>
+                <td><button onclick="add(1)">1</button></td>
+                <td><button onclick="add(2)">2</button></td>
+                <td><button onclick="add(3)">3</button></td>
+                <td><button onclick="add('+')">+</button></td>
+            </tr>
+
+            <tr>
+                <td><button onclick="add(4)">4</button></td>
+                <td><button onclick="add(5)">5</button></td>
+                <td><button onclick="add(6)">6</button></td>
+                <td><button onclick="add('-')">-</button></td>
+            </tr>
+
+            <tr>
+                <td><button onclick="add(7)">7</button></td>
+                <td><button onclick="add(8)">8</button></td>
+                <td><button onclick="add(9)">9</button></td>
+                <td><button onclick="add('*')">*</button></td>
+            </tr>
+
+            <tr>
+                <td><button onclick="add(0)">0</button></td>
+                <td><button onclick="calculate()">=</button></td>
+                <td><button onclick="reset()">C</button></td>
+                <td><button onclick="add('/')">/</button></td>
+            </tr>
+        </table>
+    </div>
+
+    <div id="container2">
+        <h1>계산결과</h1>
+        <input type="text" id="display">
+    </div>
+</body>
+</html>
